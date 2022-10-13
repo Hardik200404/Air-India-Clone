@@ -1,9 +1,9 @@
 const express=require('express');//this import gives back express function
-let app=express();
-//using express function we will initialize the app
+let app=express();//using express function we will initialize the app
 
 const body_parser=require('body-parser');
 //this is imported to parse the body of the req
+//according to our required format
 app.use(body_parser.json());
 
 app.get('/',function(req,res){
@@ -12,7 +12,7 @@ app.get('/',function(req,res){
 })
 
 require('./routes/help.route')(app);
-//registering help route by passing the app to help route
+//registering help route by passing the express app to help route
 
 const {connect}=require('./configs/database');
 

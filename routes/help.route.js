@@ -1,4 +1,4 @@
-let {help_index}=require('../controllers/help.controller');
+let help_controller=require('../controllers/help.controller');
 module.exports=function(app){
-    app.get('/help',help_index);
+    app.get('/help',help_controller.help_index);
 }
