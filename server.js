@@ -11,8 +11,10 @@ app.get('/',function(req,res){
     res.end("Hello World");
 })
 
+//registering routes by passing the express app to routes
 require('./routes/help.route')(app);
-//registering help route by passing the express app to help route
+require('./routes/auth.route')(app);
+require('./routes/users.route')(app);
 
 const {connect}=require('./configs/database');
 
